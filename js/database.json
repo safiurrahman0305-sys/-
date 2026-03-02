@@ -1,0 +1,14 @@
+{
+    "news": [
+        {
+            "id": 1,
+            "ur": { "title": "داخلہ شروع ہے", "content": "مدرسۃ الحسنین میں نئے تعلیمی سال کے داخلے شروع ہو چکے ہیں۔" },
+            "ar": { "title": "بدء القبول", "content": "بدأ القبول للعام الدراسي الجديد في مدرسة الحسنين." },
+            "en": { "title": "Admissions Open", "content": "Admissions for the new academic year have started at Madrasa Al-Hasanain." }
+        }
+    ],
+    "departments": [
+        { "id": "hifz", "ur": "حفظ القرآن", "ar": "تحفيظ القرآن", "en": "Hifz-ul-Quran" },
+        { "id": "dars", "ur": "درسِ نظامی", "ar": "الدرس النظامي", "en": "Dars-e-Nizami" }
+    ]
+}

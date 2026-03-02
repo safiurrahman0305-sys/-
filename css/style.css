@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+/* High-quality Jameel Noori Nastaleeq CDN */
+@import url('https://cdn.jsdelivr.net/gh/Parsa-S/Jameel-Noori-Nastaleeq-CDN@master/font.css');
+
+@font-face {
+    font-family: 'Jameel Noori Nastaleeq';
+    src: local('Jameel Noori Nastaleeq'),
+        url('https://cdn.jsdelivr.net/gh/googlei18n/noto-fonts/unhinted/NotoNastaliqUrdu/NotoNastaliqUrdu-Regular.ttf');
+}
+
+:root {
+    --primary-color: #004d40;
+    --secondary-color: #d4af37;
+    --accent-color: #b28900;
+    --text-dark: #2c3e50;
+    --text-light: #ffffff;
+    --bg-light: #f4f7f6;
+    --section-bg: #fdfdfd;
+    --card-bg: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --input-bg: #ffffff;
+    --input-text: #2c3e50;
+}
+
+body.dark-mode {
+    --primary-color: #1a4731;
+    --secondary-color: #d4af37;
+    --text-dark: #e0e0e0;
+    --text-light: #ffffff;
+    --bg-light: #121212;
+    --section-bg: #1a1a1a;
+    --card-bg: #1e1e1e;
+    --glass-bg: rgba(30, 30, 30, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --input-bg: #2a2a2a;
+    --input-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Roboto', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.8;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input,
+textarea,
+select {
+    background-color: var(--input-bg) !important;
+    color: var(--input-text) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
+    line-height: 1.5;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    font-family: 'Amiri', 'Noto Nastaliq Urdu', serif;
+}
+
+/* Urdu specifically for Nastaleeq */
+[lang="ur"] {
+    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif !important;
+    font-size: 1.15rem;
+    line-height: 2.2 !important;
+}
+
+/* Header & Navigation */
+header {
+    background: #1a4731;
+    color: white;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid #d4af37;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #d4af37;
+    /* Bright Golden */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
+    white-space: nowrap;
+    padding: 0 15px;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    /* Push items to the left in RTL */
+    margin-right: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    white-space: nowrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 5px 0;
+    transition: var(--transition);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 2px 10px;
+    border-radius: 30px;
+    border: 1px solid #d4af37;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: #d4af37;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(20deg);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 6px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lang-btn.active {
+    background: #d4af37;
+    /* Golden Background when active */
+    color: #1a4731;
+    /* Deep Green Text */
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+}
+
+.lang-btn:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Force Nastaleeq for Urdu button specifically */
+.lang-btn[onclick*="'ur'"] {
+    font-family: 'Jameel Noori Nastaleeq', serif;
+    font-size: 1rem;
+    padding-top: 2px;
+}
+
+/* RTL/LTR Alignment Classes */
+body.ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Hero Section */
+.hero {
+    height: 65vh;
+    /* Slightly shorter height */
+    min-height: 450px;
+    background: linear-gradient(135deg, #0a111a 0%, #1a2a3a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 60px 20px;
+    /* More padding for text */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    max-width: 900px;
+    margin-bottom: 2.5rem;
+    line-height: 2;
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections */
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    color: var(--primary-color);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 15px auto;
+}
+
+/* Features/Departments Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-top: 5px solid var(--secondary-color);
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    padding: 60px 10% 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+[dir="rtl"] .footer-content {
+    text-align: right;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Glasscard */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+[dir="rtl"] .whatsapp-float {
+    right: auto;
+    left: 30px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Phone Number Direction Fix (Forces English Style No Matter What) */
+.phone-number,
+bdo.phone-number {
+    direction: ltr !important;
+    unicode-bidi: bidi-override !important;
+    display: inline-block !important;
+    font-family: 'Roboto', 'Arial', sans-serif !important;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}

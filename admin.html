@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Madrasa Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admin-container {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .edit-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body dir="ltr">
+    <header>
+        <div class="logo-text">Admin Panel - Madrasa Al-Hasanain</div>
+        <a href="index.html" class="btn-primary">View Website</a>
+    </header>
+
+    <div class="admin-container">
+        <h2 class="section-title">Update Content (Tri-Lingual)</h2>
+
+        <div class="card">
+            <h3>Latest News / Announcement</h3>
+            <div class="edit-row">
+                <div>
+                    <label>Urdu</label>
+                    <input type="text" placeholder="Title (Urdu)" style="width:100%; margin-bottom:10px;">
+                    <textarea placeholder="Content (Urdu)"></textarea>
+                </div>
+                <div>
+                    <label>Arabic</label>
+                    <input type="text" placeholder="Title (Arabic)" style="width:100%; margin-bottom:10px;">
+                    <textarea placeholder="Content (Arabic)"></textarea>
+                </div>
+                <div>
+                    <label>English</label>
+                    <input type="text" placeholder="Title (English)" style="width:100%; margin-bottom:10px;">
+                    <textarea placeholder="Content (English)"></textarea>
+                </div>
+            </div>
+            <button class="btn-primary">Save Changes</button>
+        </div>
+    </div>
+</body>
+
+</html>
