@@ -17,12 +17,11 @@
             color: white;
             border-bottom: 5px solid var(--secondary-color);
             margin-bottom: 40px;
-        }
-/* لائٹ اور ڈارک دونوں موڈ میں بکس دکھانے کے لیے */
+        }/* ۱. فارم کے بکس (لائٹ اور ڈارک دونوں موڈ کے لیے) */
 input, select, textarea {
-    border: 1px solid #555 !important; /* واضح بارڈر */
-    background-color: #ffffff !important; /* لائٹ موڈ میں سفید پس منظر */
-    color: #000000 !important; /* کالی تحریر */
+    border: 1px solid #555 !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
     padding: 10px !important;
     margin-bottom: 15px !important;
     display: block !important;
@@ -30,14 +29,29 @@ input, select, textarea {
     border-radius: 5px !important;
 }
 
-/* ڈارک موڈ (Dark Mode) کے لیے خودکار سیٹنگ */
 [data-theme='dark'] input, 
 [data-theme='dark'] select, 
 [data-theme='dark'] textarea {
-    background-color: #222 !important; /* ڈارک موڈ میں گہرا پس منظر */
-    color: #ffffff !important; /* سفید تحریر */
+    background-color: #222 !important;
+    color: #ffffff !important;
     border: 1px solid #777 !important;
-}}
+}
+
+/* ۲. موبائل پر ڈیزائن سیٹ کرنے کے لیے (Responsive) */
+@media (max-width: 768px) {
+    .container { width: 95% !important; padding: 5px !important; }
+    /* لوگو اور مینو کو ترتیب دینے کے لیے */
+    header, .nav-menu { 
+        display: flex !important; 
+        flex-direction: column !important; 
+        align-items: center !important; 
+        text-align: center !important;
+    }
+    img { max-width: 100% !important; height: auto !important; }
+    h1 { font-size: 1.4rem !important; }
+    /* مینو کے لنکس کو موبائل پر بہتر دکھانا */
+    .nav-link { padding: 8px !important; font-size: 15px !important; }
+}
 
         .search-box {
             max-width: 800px;
@@ -914,4 +928,5 @@ input, select, textarea {
 
 
 </html>
+
 
