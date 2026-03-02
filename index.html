@@ -18,10 +18,10 @@
             border-bottom: 5px solid var(--secondary-color);
             margin-bottom: 40px;
         }
-        /* داخلہ فارم کے خانے واضح کرنے کے لیے */
+/* لائٹ اور ڈارک دونوں موڈ میں بکس دکھانے کے لیے */
 input, select, textarea {
-    border: 2px solid #000000 !important; /* کالا بارڈر */
-    background-color: #ffffff !important; /* سفید پس منظر */
+    border: 1px solid #555 !important; /* واضح بارڈر */
+    background-color: #ffffff !important; /* لائٹ موڈ میں سفید پس منظر */
     color: #000000 !important; /* کالی تحریر */
     padding: 10px !important;
     margin-bottom: 15px !important;
@@ -29,6 +29,15 @@ input, select, textarea {
     width: 100% !important;
     border-radius: 5px !important;
 }
+
+/* ڈارک موڈ (Dark Mode) کے لیے خودکار سیٹنگ */
+[data-theme='dark'] input, 
+[data-theme='dark'] select, 
+[data-theme='dark'] textarea {
+    background-color: #222 !important; /* ڈارک موڈ میں گہرا پس منظر */
+    color: #ffffff !important; /* سفید تحریر */
+    border: 1px solid #777 !important;
+}}
 
         .search-box {
             max-width: 800px;
@@ -905,3 +914,4 @@ input, select, textarea {
 
 
 </html>
+
